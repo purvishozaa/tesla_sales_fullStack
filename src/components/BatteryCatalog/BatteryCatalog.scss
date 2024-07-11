@@ -1,0 +1,94 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.battery {
+  background-color: white;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+
+  .battery-image {
+    max-width: 100%;
+    width: 150px; // Set desired width
+    height: 150px; // Set desired height
+    object-fit: cover; // Ensures the image covers the box without distortion
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .result-text span {
+    line-height: 1.5;
+    padding: 2px;
+  }
+
+  .battery-details {
+    h3 {
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    div {
+      margin-bottom: 10px;
+
+      label {
+        font-weight: bold;
+      }
+
+      span {
+        margin-left: 10px;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+  }
+}
+.configure-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $primary-color; /* Green */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  position:absolute;
+}
+.configure-btn:hover {
+  transform: scale(1.2); /* Darker green */
+}
+
+/* Active/focus state */
+.configure-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4CAF50; /* White outline */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btn-cont{
+  display: flex;
+  position: relative;
+  justify-content: center;
+}

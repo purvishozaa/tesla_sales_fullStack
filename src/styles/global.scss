@@ -1,0 +1,35 @@
+@import './variables';
+@import './mixins';
+@import './reset';
+@import 'react-toastify/dist/ReactToastify.css';
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.toast-container {
+  .Toastify__toast {
+    border-radius: 5px;
+    font-family: $font-family;
+  }
+
+  .Toastify__toast--success {
+    background-color: $secondary-color;
+  }
+
+  .Toastify__toast--error {
+    background-color: $primary-color;
+  }
+}
