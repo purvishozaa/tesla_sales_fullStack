@@ -15,6 +15,8 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
+      <Route path="/" element={<About />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/battery-configuration" element={<BatteryCatalog />} />
         <Route path="/logout" element={<LogOut />} />
